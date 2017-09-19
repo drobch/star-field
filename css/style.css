@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #acc;
+    color: darkslategrey;
+    font-size: 22px;
+    font-family: fantasy; 
+}
+
+main {
+    height: 400px;
+    width: 100%;
+    background: black;
+    margin-bottom: 1em;
+}
+
+.wrapper {
+    width: 100%;  
+    text-align: center;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: darkslategrey;
+    padding: 0.3em 2em; 
+}
+.wrapper a:hover { 
+    background: #acc; 
+    border: 1px solid #edd;
+    border-radius: 50px;
+    text-shadow: 1px 1px 1px white;
+}
+
+footer { 
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 16px;
+    text-align: center;
+    background: #eed; 
+    padding: 1em;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: palevioletred;
+    padding: 0.3em 2em;
+}
+footer a:hover { 
+    border: 1px solid #acd;
+    border-radius: 50px; 
+}
