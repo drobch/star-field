@@ -6,8 +6,6 @@
     <title>Document</title>
 
         <link rel="stylesheet" href="css/style.css">
- 
-
 
     <style>
         body {
@@ -18,28 +16,69 @@
 </head>
 
 <body>
-    <script src="/js/script.js"></script>
+
+    <script src="js/script.js"></script>
      
     <header>
         <nav>
-            <a href="#">Prev</a> 
-            <a href="#">Next</a>
+            <button type="button" onclick="prev()" id="prevBtn">Prev</button>
+            <button type="button" onclick="next()" id="nextBtn"> Next </button>
         </nav>
-      
+
     </header>
 
         <content>
-           <h3>
-               What is a closure?
-           </h3>
-           <p>
-                A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.
-            </p> 
-            <p>
-                The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s arguments object, however, even though it can call the outer function’s parameters directly.
-            </p>
-            
-            
+            <article class="visible">
+               <h3>
+                   What is a closure?
+               </h3>
+
+                <h5 style="color: dimgrey; font-style: italic">"If you can’t answer this question, you’re a junior developer. I don’t care how long you’ve been coding."</h5>
+
+               <p>
+                   What is a Closure?
+                   A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+                   To use a closure, simply define a function inside another function and expose it. To expose a function, return it or pass it to another function.
+                   The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+               </p>
+
+                <time datetime="2017-12-12">2017-12-12</time>
+
+           </article>
+            <article class="hidden">
+                <h3>
+                    What is a closure?
+                </h3>
+
+                <h5 style="color: dimgrey; font-style: italic">Why is this question so popular?</h5>
+
+                <p>
+                    The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+                </p>
+                <p>
+                    A solid understanding of functional/block scope, anonymous functions, closures, and IIFE’s will definitely make you a better JavaScript developer and help you out in future interviews.
+                </p>
+
+                <time datetime="2017-12-12">2017-12-12</time>
+            </article>
+            <article class="hidden">
+                <h3>
+                    What is a closure?
+                </h3>
+
+                <h5 style="color: dimgrey; font-style: italic">Closures’ Rules and Side Effects</h5>
+
+                <p>
+                    One of the most important and ticklish features with closures is that the inner function still has access to the outer function’s variables even after the outer function has returned. Yep, you read that correctly. When functions in JavaScript execute, they use the same scope chain that was in effect when they were created. This means that even after the outer function has returned, the inner function still has access to the outer function’s variables. Therefore, you can call the inner function later in your program.
+                </p>
+
+                <p>Closures store references to the outer function’s variables; they do not store the actual value.  Closures get more interesting when the value of the outer function’s variable changes before the closure is called. </p>
+
+                <p>
+                     Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop.
+                </p>
+                <time datetime="2017-12-12">2017-12-12</time>
+            </article>
         </content>
         
         <footer>

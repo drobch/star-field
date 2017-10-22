@@ -19,11 +19,10 @@ header {
 content {
     position: absolute;
     top: 7em;
-    
     font-family: Lucida Console;  
     letter-spacing: 1px;
     font-size: 18px;
-    padding: 1em 4em;
+    padding: 1em 10em;
 }
 
 content h3 {
@@ -37,14 +36,26 @@ content p::first-letter {
     padding-left: 1em;
 }
 
-nav a {
-    text-decoration: none;
-    color: darkslategrey; 
-    padding: 0.5em 3em;  
+time {
+    position: relative;
+    font-style: italic;
+    font-size: small;
+    color: #ccc;
+    left: 7%;
 }
-nav a:hover {  
-    border: 1px solid #edd; 
-    text-shadow: 1px 1px 1px white;
+nav button {
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+    color: #583f5e;
+    background: transparent;
+    padding: 0.5em 2em;
+}
+nav button:hover  {
+    box-shadow: 0 0.5em 0.5em -0.4em #642286;
+    transform: translateY(-0.3em);
+    border: 1px solid #583f5e;
 }
 
 footer {
@@ -67,3 +78,5 @@ footer a:hover {
     border: 1px solid #acd;
     border-radius: 50px; 
 }
+
+.hidden { display: none; }
