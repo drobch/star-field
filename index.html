@@ -15,7 +15,7 @@
      
     <header>
         <logo>
-            <a href="#">.drobch</a>
+            <a href="www.drobch.github.io/star-field">.drobch</a>
         </logo>
 
         <nav>
@@ -28,21 +28,36 @@
     <content>
         <article class="visible">
                <h3>
-                   What is a closure?
+                   What is BEM Methodology?
                </h3>
 
-                <h5>"If you can’t answer this question, you’re a junior developer. I don’t care how long you’ve been coding."</h5>
+                <h5>BEM Methodology will massively improve code maintainability and speed up the development process</h5>
 
                <p>
-                   What is a Closure?
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias animi at commodi consectetur esse eum exercitationem inventore ipsam ipsum iste laboriosam magni neque, nisi nobis nostrum nulla odio officiis optio praesentium provident quae quo, ratione recusandae saepe vel voluptatibus.
-                   A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
-                   To use a closure, simply define a function inside another function and expose it. To expose a function, return it or pass it to another function.
-                   The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+                   Today, there are plenty of methodologies with the aim of reducing CSS code and making your CSS code more maintainable. In this article, I am going to explain and provide a few examples of one of them: BEM. BEM stands for Block Element Modifier. The main idea behind it is to speed up the development process, and ease the teamwork of developers by arranging CSS classes into independent modules. If you ever saw a class name like header__form--search, that is BEM in action. Yes, classes can be named very long, but they are all readable and understandable. <br>
+
+                   Note that the best practice is to use BEM only with classes, and not IDs because classes allow you to repeat names if necessary and create more consistent coding structure. Also, if you want to break your website into organized modules, it should consist of the same structure: block, element, and modifier. Where each block can have multiple elements, and both block and elements can have multiple modifiers.
                </p>
 
-                <time datetime="2017-12-12">2017-12-12</time>
+                <time datetime="2017-12-12">2017-11-13</time>
 
+        </article>
+        <article class="hidden">
+            <h3>
+                What is a closure?
+            </h3>
+
+            <h5>Closures’ Rules and Side Effects</h5>
+
+            <p>
+                A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.<br>
+
+                The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s arguments object, however, even though it can call the outer function’s parameters directly. <br>
+            </p>
+            <p>
+                Closures allow JavaScript programmers to write better code. Creative, expressive, and concise. We frequently use closures in JavaScript, and, no matter your JavaScript experience, you will undoubtedly encounter them time and again. Sure, closures might appear complex and beyond your scope, but after you read this article, closures will be much more easily understood and thus more appealing for your everyday JavaScript programming tasks.
+            </p>
+            <time datetime="2017-12-12">2017-12-12</time>
         </article>
         <article class="hidden">
                 <h3>
@@ -78,6 +93,7 @@
                 </p>
                 <time datetime="2017-12-12">2017-12-12</time>
         </article>
+
     </content>
         
     <footer>
