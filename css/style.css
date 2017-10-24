@@ -14,8 +14,8 @@ header {
 
 logo {
     position: fixed;
-    top: 1em;
-    left: 1em;
+    top: 1rem;
+    left: 1rem;
     letter-spacing: 3px;
 
 }
@@ -24,7 +24,7 @@ logo a {
     text-decoration: none;
     color: palevioletred;
     font-weight: 800;
-    font-size: larger;
+    font-size: 2.5rem;
     transition-duration: 0.5s;
 
 }
@@ -43,7 +43,7 @@ nav {
 
 nav button {
     border: none;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1;
     text-decoration: none;
     color: #583f5e;
@@ -54,8 +54,13 @@ nav button:hover  {
     color: #9e30cb;
     box-shadow: 0 0.5em 0.5em -0.4em #642286;
     transform: translateY(-0.3em);
-    border: 1px solid #583f5e;
+
 }
+
+nav button:focus {
+    outline: none;
+}
+
 
 content {
     text-align:justify;
