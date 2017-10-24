@@ -49,6 +49,7 @@ nav button {
     color: #583f5e;
     background: transparent;
     padding: 0.5em 2em;
+    transition-duration: 0.3s;
 }
 nav button:hover  {
     color: #9e30cb;
