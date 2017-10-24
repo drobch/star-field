@@ -14,17 +14,20 @@ header {
 
 logo {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
     letter-spacing: 3px;
-
+    margin-top: 3vh;
+    margin-left: 1.5vw;
 }
 
 logo a {
+
+    text-shadow: 2px 1px 5px #642286;
     text-decoration: none;
     color: palevioletred;
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 4vmin;
     transition-duration: 0.5s;
 
 }
@@ -35,20 +38,19 @@ logo a:hover {
 }
 
 nav {
-    padding-top: 1em;
+    padding-top: 2.5em;
     align-content: center;
-    height: 60px;
+    height: 10vh;
 
 }
 
 nav button {
     border: none;
-    font-size: 24px;
-    line-height: 1;
+    font-size: 4vmin;
     text-decoration: none;
     color: #583f5e;
     background: transparent;
-    padding: 0.5em 2em;
+    padding: 0.5em 1.5em;
     transition-duration: 0.3s;
 }
 nav button:hover  {
@@ -64,17 +66,19 @@ nav button:focus {
 
 
 content {
-    text-align:justify;
     display: block;
-    margin: 1em 6em 0 10em;
+    margin: 1vh 16vw 0 18vw;
     font-family: Lucida Console;
-
-    letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 3vmin;
     overflow: auto;
 }
 
+content h3, content h5 {
+    text-align:justify;
+}
+
 content h3 {
+
     text-transform: uppercase;
     padding: 0 1em;
     text-shadow: 2px 1px 4px #00ff00;
@@ -83,7 +87,7 @@ content h3 {
 content p::first-letter {
     padding-left: 1em;
 }
-article h5 {
+section h5 {
     color: #583f5e;
     font-style: italic;
 }
@@ -99,16 +103,16 @@ footer {
     left: 0;
     bottom: 0;
     position: fixed;
-    font-size: 3vm;
+    font-size: 4vmin;
+    margin-bottom: 2vh;
 }
 
 footer .foo {
-    margin: 1em;
-
+    margin-bottom: 2.3vh;
+    margin-left: 1vh;
 }
-
 footer a {
-    padding: 0.3em 1em;
+    padding: 0.1em 0.8em;
     text-decoration: none;
     color: palevioletred;
 }
