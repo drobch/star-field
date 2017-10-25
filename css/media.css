@@ -1,4 +1,7 @@
 @media (max-width: 721px) {
+    body {
+        overflow-x: hidden;
+    }
     logo {
         position: fixed;
         writing-mode: vertical-rl;
