@@ -22,12 +22,11 @@ logo {
 }
 
 logo a {
-
     text-shadow: 2px 1px 5px #642286;
     text-decoration: none;
     color: palevioletred;
     font-weight: 800;
-    font-size: 4vmin;
+    font-size: 3vmin;
     transition-duration: 0.5s;
 }
 
@@ -37,10 +36,8 @@ logo a:hover {
 }
 
 nav {
-    padding-top: 5vh;
+    padding: 5vh 0 3vh 0;
     align-content: center;
-    height: 8vw;
-
 }
 
 nav button {
@@ -74,6 +71,7 @@ content {
 }
 
 content h3 {
+    text-align: center;
     text-transform: uppercase;
     padding: 0 1em;
     text-shadow: 2px 1px 4px #00ff00;
@@ -120,19 +118,4 @@ footer a:hover {
 
 .hidden { display: none; }
 
-@media (max-width: 721px) {
-    logo {
-        letter-spacing: 1px;
-        margin-top: 3vh;
-        margin-left: 1.1vw;
-    }
 
-    content {
-        margin: 1vh 2vw 0 21vw;
-        font-size: 16px;
-        text-align: left;
-    }
-    nav {
-        padding-top: 1vh;
-    }
-}
