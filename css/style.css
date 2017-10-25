@@ -26,7 +26,7 @@ logo a {
     text-decoration: none;
     color: palevioletred;
     font-weight: 800;
-    font-size: 3vmin;
+    font-size: 5vmin;
     transition-duration: 0.5s;
 }
 
@@ -36,7 +36,7 @@ logo a:hover {
 }
 
 nav {
-    padding: 5vh 0 3vh 0;
+    margin-top: 4vw;
     align-content: center;
 }
 
@@ -63,24 +63,25 @@ nav button:focus {
 
 content {
     display: block;
-    text-align:justify;
-    margin: 1vh 20vw 0 20vw;
+    text-align: justify;
+    margin: 1vh 20vw 10vh 20vw;
     font-family: Lucida Console, fantasy;
     font-size: 22px;
     overflow: auto;
+
 }
 
-content h3 {
+section h3 {
     text-align: center;
     text-transform: uppercase;
-    padding: 0 1em;
     text-shadow: 2px 1px 4px #00ff00;
     
 }
-content p::first-letter {
+section p::first-letter {
     padding-left: 1em;
 }
 section h5 {
+    padding: 0 1em;
     color: #583f5e;
     font-style: italic;
 }

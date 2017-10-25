@@ -33,5 +33,4 @@ function prev() {
         toShow.classList.add('visible');
     }
 
-
 };
