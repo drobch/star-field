@@ -1,5 +1,6 @@
 @media (max-width: 721px) {
     logo {
+        position: fixed;
         writing-mode: vertical-rl;
         letter-spacing: 1px;
         margin-top: 3vh;
