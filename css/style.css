@@ -29,7 +29,6 @@ logo a {
     font-weight: 800;
     font-size: 4vmin;
     transition-duration: 0.5s;
-
 }
 
 logo a:hover {
@@ -38,9 +37,9 @@ logo a:hover {
 }
 
 nav {
-    padding-top: 2.5em;
+    padding-top: 5vh;
     align-content: center;
-    height: 10vh;
+    height: 8vw;
 
 }
 
@@ -67,18 +66,14 @@ nav button:focus {
 
 content {
     display: block;
-    margin: 1vh 16vw 0 18vw;
-    font-family: Lucida Console;
-    font-size: 3vmin;
+    text-align:justify;
+    margin: 1vh 20vw 0 20vw;
+    font-family: Lucida Console, fantasy;
+    font-size: 22px;
     overflow: auto;
 }
 
-content h3, content h5 {
-    text-align:justify;
-}
-
 content h3 {
-
     text-transform: uppercase;
     padding: 0 1em;
     text-shadow: 2px 1px 4px #00ff00;
@@ -124,3 +119,20 @@ footer a:hover {
 }
 
 .hidden { display: none; }
+
+@media (max-width: 720px) {
+    logo {
+        letter-spacing: 1px;
+        margin-top: 3vh;
+        margin-left: 1.1vw;
+    }
+
+    content {
+        margin: 1vh 2vw 0 21vw;
+        font-size: 16px;
+        text-align: left;
+    }
+    nav {
+        padding-top: 1vh;
+    }
+}
