@@ -70,6 +70,19 @@ content {
 
 }
 
+section img {
+    width: 100%;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.width70 img {
+    width: 70%;
+    left: 1em;
+}
+
+
 section h3 {
     text-align: center;
     text-transform: uppercase;
