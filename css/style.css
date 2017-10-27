@@ -131,4 +131,48 @@ footer a:hover {
 
 .hidden { display: none; }
 
+content .gmail {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 3vw;
+}
+
+content section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+content section form div input, content section form div textarea {
+    border: 1px solid #642286;
+    border-radius: 3px;
+    background-color: #583f5e;
+    padding: 1em 1em;
+    margin: 1em 0;
+    width: 20em;
+
+}
+content section form div textarea {
+    height: 10em;
+
+}
+content section form   button {
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    background: transparent;
+    color: #b87ecb;
+    padding: 0.1em 0.8em;
+}
+content section form   button:hover  {
+    border: 1px solid #acd;
+    border-radius: 50px;
+    color: white;
+}
+content section form   button:focus {
+    outline: none;
+}
+
+
 
