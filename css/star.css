@@ -1,0 +1,178 @@
+
+body {
+    background: #0d0d0d;
+    color: white;
+    font-size: 22px;
+    font-family: fantasy;
+}
+
+header {
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+}
+
+logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    letter-spacing: 3px;
+    margin-top: 3vh;
+    margin-left: 1.5vw;
+}
+
+logo a {
+    text-shadow: 2px 1px 5px #642286;
+    text-decoration: none;
+    color: palevioletred;
+    font-weight: 800;
+    font-size: 5vmin;
+    transition-duration: 0.5s;
+}
+
+logo a:hover {
+    color: #403441;
+    text-shadow: 1px 1px 1px #cccccc;
+}
+
+nav {
+    margin-top: 4vw;
+    align-content: center;
+}
+
+nav button {
+    border: none;
+    font-size: 4vmin;
+    text-decoration: none;
+    color: #583f5e;
+    background: transparent;
+    padding: 0.5em 1.5em;
+    transition-duration: 0.3s;
+}
+nav button:hover  {
+    color: #9e30cb;
+    box-shadow: 0 0.5em 0.5em -0.4em #642286;
+    transform: translateY(-0.3em);
+
+}
+
+nav button:focus {
+    outline: none;
+}
+
+
+content {
+    display: block;
+    text-align: justify;
+    margin: 1vh 20vw 10vh 20vw;
+    font-family: Lucida Console, fantasy;
+    font-size: 22px;
+
+}
+
+section img {
+    width: 100%;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.width70 img {
+    width: 70%;
+    left: 1em;
+}
+
+
+section h3 {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 4px #00ff00;
+
+}
+section p::first-letter {
+    padding-left: 1em;
+}
+section h5 {
+    padding: 0 1em;
+    color: #583f5e;
+    font-style: italic;
+}
+time {
+    font-style: italic;
+    font-size: small;
+    color: #ccc;
+    left: 7%;
+}
+
+footer {
+    display: block;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    font-size: 4vmin;
+    margin-bottom: 2vh;
+}
+
+footer .foo {
+    margin-bottom: 2.3vh;
+    margin-left: 1vh;
+}
+footer a {
+    padding: 0.1em 0.8em;
+    text-decoration: none;
+    color: palevioletred;
+}
+
+footer a:hover {
+    border: 1px solid #acd;
+    border-radius: 50px;
+    color: #9e30cb;
+}
+
+.hidden { display: none; }
+
+content .gmail {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 3vw;
+}
+
+content section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+content section form div input, content section form div textarea {
+    border: 1px solid #642286;
+    border-radius: 3px;
+    background-color: #583f5e;
+    padding: 1em 1em;
+    margin: 1em 0;
+    width: 20em;
+
+}
+content section form div textarea {
+    height: 10em;
+
+}
+content section form   button {
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    background: transparent;
+    color: #b87ecb;
+    padding: 0.1em 0.8em;
+}
+content section form   button:hover  {
+    border: 1px solid #acd;
+    border-radius: 50px;
+    color: white;
+}
+content section form   button:focus {
+    outline: none;
+}
+
+
+

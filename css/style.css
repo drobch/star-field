@@ -1,178 +1,87 @@
 
+#space, .stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stars {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, yellow, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
+
+
 body {
-    background: #0d0d0d;
-    color: white;
-    font-size: 22px;
-    font-family: fantasy; 
-}
-  
-header {
-    font-size: 22px;  
-    text-align: center;
-    width: 100%;
+  background: #000;
+  font-family: fantasy, sans-serif;
 }
 
-logo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    letter-spacing: 3px;
-    margin-top: 3vh;
-    margin-left: 1.5vw;
+a {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin: -1.5em -2.5em;
+  opacity: 0.4;
+  width: 5em;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 2px 1px 5px #642286;
+  text-decoration: none;
+  color: palevioletred;
+  transition-duration: 0.5s;
 }
 
-logo a {
-    text-shadow: 2px 1px 5px #642286;
-    text-decoration: none;
-    color: palevioletred;
-    font-weight: 800;
-    font-size: 5vmin;
-    transition-duration: 0.5s;
+a:hover {
+  opacity: 0.7;
 }
-
-logo a:hover {
-    color: #403441;
-    text-shadow: 1px 1px 1px #cccccc;
-}
-
-nav {
-    margin-top: 4vw;
-    align-content: center;
-}
-
-nav button {
-    border: none;
-    font-size: 4vmin;
-    text-decoration: none;
-    color: #583f5e;
-    background: transparent;
-    padding: 0.5em 1.5em;
-    transition-duration: 0.3s;
-}
-nav button:hover  {
-    color: #9e30cb;
-    box-shadow: 0 0.5em 0.5em -0.4em #642286;
-    transform: translateY(-0.3em);
-
-}
-
-nav button:focus {
-    outline: none;
-}
-
-
-content {
-    display: block;
-    text-align: justify;
-    margin: 1vh 20vw 10vh 20vw;
-    font-family: Lucida Console, fantasy;
-    font-size: 22px;
-
-}
-
-section img {
-    width: 100%;
-    position: relative;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.width70 img {
-    width: 70%;
-    left: 1em;
-}
-
-
-section h3 {
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 2px 1px 4px #00ff00;
-    
-}
-section p::first-letter {
-    padding-left: 1em;
-}
-section h5 {
-    padding: 0 1em;
-    color: #583f5e;
-    font-style: italic;
-}
-time {
-    font-style: italic;
-    font-size: small;
-    color: #ccc;
-    left: 7%;
-}
-
-footer {
-    display: block;
-    left: 0;
-    bottom: 0;
-    position: fixed;
-    font-size: 4vmin;
-    margin-bottom: 2vh;
-}
-
-footer .foo {
-    margin-bottom: 2.3vh;
-    margin-left: 1vh;
-}
-footer a {
-    padding: 0.1em 0.8em;
-    text-decoration: none;
-    color: palevioletred;
-}
-
-footer a:hover { 
-    border: 1px solid #acd;
-    border-radius: 50px;
-    color: #9e30cb;
-}
-
-.hidden { display: none; }
-
-content .gmail {
-    display: flex;
-    flex-direction: column;
-    padding: 5vh 3vw;
-}
-
-content section form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-content section form div input, content section form div textarea {
-    border: 1px solid #642286;
-    border-radius: 3px;
-    background-color: #583f5e;
-    padding: 1em 1em;
-    margin: 1em 0;
-    width: 20em;
-
-}
-content section form div textarea {
-    height: 10em;
-
-}
-content section form   button {
-    border: none;
-    font-size: 1em;
-    text-decoration: none;
-    background: transparent;
-    color: #b87ecb;
-    padding: 0.1em 0.8em;
-}
-content section form   button:hover  {
-    border: 1px solid #acd;
-    border-radius: 50px;
-    color: white;
-}
-content section form   button:focus {
-    outline: none;
-}
-
-
-
