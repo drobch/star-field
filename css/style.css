@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
 #space, .stars {
   overflow: hidden;
   position: absolute;
@@ -63,7 +63,7 @@
 
 body {
   background: #000;
-  font-family: fantasy, sans-serif;
+  font-family: Anton, sans-serif;
 }
 
 a {

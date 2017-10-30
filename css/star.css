@@ -1,9 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
 body {
     background: #0d0d0d;
     color: white;
     font-size: 22px;
-    font-family: fantasy;
+    font-family: Lucida Console;
 }
 
 header {
@@ -13,6 +13,7 @@ header {
 }
 
 logo {
+    font-family: Anton, sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,6 +42,7 @@ nav {
 }
 
 nav button {
+    font-family: Anton, sans-serif;
     border: none;
     font-size: 4vmin;
     text-decoration: none;
@@ -76,12 +78,7 @@ section img {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
-.width70 img {
-    width: 70%;
-    left: 1em;
-}
-
+ 
 
 section h3 {
     text-align: center;
@@ -105,6 +102,7 @@ time {
 }
 
 footer {
+    font-family: Anton, sans-serif;
     display: block;
     left: 0;
     bottom: 0;
