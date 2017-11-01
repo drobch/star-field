@@ -19,9 +19,7 @@
     }
 
     footer {
-        width: 100%;
         position: relative;
-        font-size: 4vmin;
         left: 50%;
         margin: 4vh 0 5vh 0;
         align-content: center;
