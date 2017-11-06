@@ -130,10 +130,8 @@ footer a:hover {
 .hidden { display: none; }
 
 content .gmail {
-    display: flex;
-    flex-direction: column;
-    padding: 5vh 3vw;
-}
+     padding: 5vh 3vw;
+ }
 
 content section form {
     display: flex;
@@ -171,6 +169,3 @@ content section form   button:hover  {
 content section form   button:focus {
     outline: none;
 }
-
-
-
