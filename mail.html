@@ -11,44 +11,57 @@
 
     <link rel="stylesheet" href="css/star.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
-<header>
-    <logo>
-        <a href="https://drobch.github.io/star-field/">.drobch</a>
-    </logo>
+    <header>
+        <logo>
+            <a href="https://drobch.github.io/star-field/">.drobch</a>
+        </logo>
 
-    <nav style="opacity: 0">
-        <button type="button" onclick="prev()" id="prevBtn">Prev</button>
-        <button type="button" onclick="next()" id="nextBtn"> Next </button>
-    </nav>
+        <nav style="opacity: 0">
+            <button type="button" onclick="prev()" id="prevBtn">Prev</button>
+            <button type="button" onclick="next()" id="nextBtn"> Next </button>
+        </nav>
 
-</header>
+    </header>
 
-<content>
-    <section class="gmail">
-        <h3>Send me a message: </h3>
-        <form method="POST" action="http://formspree.io/drobyshks@gmail.com">
-            <div>
-                <input type="email" name="email" placeholder="Your email">
-            </div>
-            <div>
-                <textarea name="message" placeholder="Your message"></textarea>
-            </div>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-</content>
-
-<footer>
-    <div class="foo"><a href="https://github.com/drobch">git</a></div>
-    <div class="foo"><a href="https://vk.com/id66905289">vk</a></div>
-    <div class="foo"><a href="mail.html">gmail</a></div>
-</footer>
+    <content>
+        <section class="gmail">
+            <h3>Send me a message: </h3>
+            <form method="POST" action="http://formspree.io/drobyshks@gmail.com">
+                <div>
+                    <input type="email" name="email" placeholder="Your email">
+                </div>
+                <div>
+                    <textarea name="message" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </content>
+    
+    <footer>
+        <div class="foo">
+            <a href="https://github.com/drobch">
+                <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="foo">
+            <a href="https://vk.com/id66905289">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="foo">
+            <a href="mail.html">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
 
 
 </body>
