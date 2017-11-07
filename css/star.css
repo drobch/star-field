@@ -130,7 +130,7 @@ footer a:hover {
 .hidden { display: none; }
 
 content .gmail {
-     padding: 5vh 3vw;
+    margin-bottom: -0.7em;
  }
 
 content section form {
@@ -168,4 +168,10 @@ content section form   button:hover  {
 }
 content section form   button:focus {
     outline: none;
+}
+
+.comments {
+    position: relative;
+    margin: 5em 6vw;
+
 }
