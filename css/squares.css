@@ -25,12 +25,19 @@
 }
 
 div .square {
+    margin: 1px;
     font-size: 0.9em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     transition-duration: 0.5s;
+
+}
+div .square a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
 
 }
 div .square:hover {
