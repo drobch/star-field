@@ -42,8 +42,10 @@ div .square a {
 }
 div .square:hover {
     background-image: linear-gradient(to top, rgba(28,150,176,0.85) 0%,rgba(0,0,0,0) 100%);
-    color: #00ff00;
     cursor: pointer;
+}
+div .square a:hover {
+    color: #00ff00;
 }
 .square-1 {
     grid-column: 1 / 2;
