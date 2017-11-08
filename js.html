@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <title>drobch | FP</title>
+
+
+    <link rel="stylesheet" href="css/star.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/squares.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+<script src="js/script.js"></script>
+<header>
+    <logo>
+        <a href="https://drobch.github.io/star-field/">.drobch</a>
+    </logo>
+
+    <nav>
+        <button type="button" onclick="prev()" id="prevBtn">Prev</button>
+        <button type="button" onclick="location.href='star-field.html'" > Home </button>
+        <button type="button" onclick="next()" id="nextBtn"> Next </button>
+    </nav>
+</header>
+
+<content>
+    <section class="visible">
+
+        <h3>
+            What is BEM Methodology?
+        </h3>
+
+        <h5>BEM Methodology will massively improve code maintainability and speed up the development process</h5>
+        <img class="first" src="http://media02.hongkiat.com/css-writing-methodologies/bem.jpg" alt="bem = block + element + modifier">
+        <p>
+            Today, there are plenty of methodologies with the aim of reducing CSS code and making your CSS code more maintainable. In this section, I am going to explain and provide a few examples of one of them: BEM. BEM stands for Block Element Modifier. The main idea behind it is to speed up the development process, and ease the teamwork of developers by arranging CSS classes into independent modules. If you ever saw a class name like header__form--search, that is BEM in action. Yes, classes can be named very long, but they are all readable and understandable.
+        </p>
+        <img src="https://cdn-images-1.medium.com/max/1600/1*6FW1FEVh_jR-uGHindm46A.png" alt="bem in practice">
+        <p>
+            Note that the best practice is to use BEM only with classes, and not IDs because classes allow you to repeat names if necessary and create more consistent coding structure. Also, if you want to break your website into organized modules, it should consist of the same structure: block, element, and modifier. Where each block can have multiple elements, and both block and elements can have multiple modifiers.
+        </p>
+
+        <time datetime="2017-12-12">2017-11-13</time>
+
+    </section>
+    <section class="hidden">
+        <h3>
+            What is a closure?
+        </h3>
+
+        <h5>Closures’ Rules and Side Effects</h5>
+
+        <p>
+            A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.<br>
+
+            The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s arguments object, however, even though it can call the outer function’s parameters directly. <br>
+        </p>
+        <div>
+            <img src="https://www.kirupa.com/images/definition_closure_72.png" alt="closure example code">
+        </div>
+
+        <p>
+            Closures allow JavaScript programmers to write better code. Creative, expressive, and concise. We frequently use closures in JavaScript, and, no matter your JavaScript experience, you will undoubtedly encounter them time and again. Sure, closures might appear complex and beyond your scope, but after you read this section, closures will be much more easily understood and thus more appealing for your everyday JavaScript programming tasks.
+        </p>
+        <time datetime="2017-12-12">2017-12-12</time>
+    </section>
+    <section class="hidden">
+        <h3>
+            What is a closure?
+        </h3>
+
+        <h5>Why is this question so popular?</h5>
+
+        <p>
+            The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+        </p>
+        <p>
+            A solid understanding of functional/block scope, anonymous functions, closures, and IIFE’s will definitely make you a better JavaScript developer and help you out in future interviews.
+        </p>
+
+        <time datetime="2017-12-12">2017-12-12</time>
+    </section>
+    <section class="hidden">
+        <h3>
+            What is a closure?
+        </h3>
+
+        <h5>Closures’ Rules and Side Effects</h5>
+
+        <p>
+            One of the most important and ticklish features with closures is that the inner function still has access to the outer function’s variables even after the outer function has returned. Yep, you read that correctly. When functions in JavaScript execute, they use the same scope chain that was in effect when they were created. This means that even after the outer function has returned, the inner function still has access to the outer function’s variables. Therefore, you can call the inner function later in your program.
+        </p>
+
+        <p>Closures store references to the outer function’s variables; they do not store the actual value.  Closures get more interesting when the value of the outer function’s variable changes before the closure is called. </p>
+
+        <p>
+             Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop.
+        </p>
+        <time datetime="2017-12-12">2017-12-12</time>
+    </section>
+</content>
+
+<footer>
+    <div class="foo">
+        <a href="https://github.com/drobch">
+            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="foo">
+        <a href="https://vk.com/id66905289">
+            <i class="fa fa-vk" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="foo">
+        <a href="mail.html">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+    </div>
+</footer>
+
+</body>
+
+</html>
