@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/squares.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
+    <style>
+        .width40 {
+            width: 40%;
+            left: 1em;
+        }
+    </style>
 
 </head>
 
@@ -36,20 +42,20 @@
     <section class="visible">
 
         <h3>
-            What is BEM Methodology?
+            Chunked transfer encoding
         </h3>
 
-        <h5>BEM Methodology will massively improve code maintainability and speed up the development process</h5>
-        <img class="first" src="http://media02.hongkiat.com/css-writing-methodologies/bem.jpg" alt="bem = block + element + modifier">
+        <h5>В этой главе хочу затронуть немаловажную штуку для понимания how things works inside the box: протокол HTTP. В этом параграфе рассмотрим, что такое "чанки".</h5>
+        <img  class="width40" src="https://zoompf.com/wp-content/uploads/2012/05/transfer-types-Chunked.png" alt="работа чанков">
         <p>
-            Today, there are plenty of methodologies with the aim of reducing CSS code and making your CSS code more maintainable. In this section, I am going to explain and provide a few examples of one of them: BEM. BEM stands for Block Element Modifier. The main idea behind it is to speed up the development process, and ease the teamwork of developers by arranging CSS classes into independent modules. If you ever saw a class name like header__form--search, that is BEM in action. Yes, classes can be named very long, but they are all readable and understandable.
+            Chunked transfer encoding — механизм передачи данных в протоколе передачи гипертекста (HTTP), позволяющий надёжно доставлять данные от сервера клиенту (чаще всего клиентскому web-браузеру) без необходимости заранее знать точный размер всего тела HTTP-сообщения. Это достигается разбиением сообщения на небольшие части (chunks), а затем передачей каждой части с указанием только её размера (в шестнадцатеричном виде). Окончание передачи сообщения определяется наличием последней части с нулевой длиной. Такой механизм позволяет передать динамически сформированные объекты, для которых нельзя заранее определить размер. Он стал доступен только начиная с HTTP версии 1.1 (HTTP/1.1).
         </p>
-        <img src="https://cdn-images-1.medium.com/max/1600/1*6FW1FEVh_jR-uGHindm46A.png" alt="bem in practice">
+
         <p>
             Note that the best practice is to use BEM only with classes, and not IDs because classes allow you to repeat names if necessary and create more consistent coding structure. Also, if you want to break your website into organized modules, it should consist of the same structure: block, element, and modifier. Where each block can have multiple elements, and both block and elements can have multiple modifiers.
         </p>
 
-        <time datetime="2017-12-12">2017-11-13</time>
+        <time datetime="2017-11-09">2017-11-09</time>
 
     </section>
     <section class="hidden">
