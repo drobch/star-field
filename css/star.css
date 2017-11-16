@@ -175,3 +175,9 @@ content section form   button:focus {
     margin: 5em 6vw;
 
 }
+
+pre {
+    font-size: 0.7em;
+    font-family: monospace;
+}
+
