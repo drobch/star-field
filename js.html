@@ -36,19 +36,73 @@
     <section class="visible">
 
         <h3>
-            What is BEM Methodology?
+            BIND
         </h3>
 
-        <h5>BEM Methodology will massively improve code maintainability and speed up the development process</h5>
-        <img class="first" src="http://media02.hongkiat.com/css-writing-methodologies/bem.jpg" alt="bem = block + element + modifier">
+        <h5>Метод bind: привязка контекста в javascript</h5>
+
         <p>
-            Today, there are plenty of methodologies with the aim of reducing CSS code and making your CSS code more maintainable. In this section, I am going to explain and provide a few examples of one of them: BEM. BEM stands for Block Element Modifier. The main idea behind it is to speed up the development process, and ease the teamwork of developers by arranging CSS classes into independent modules. If you ever saw a class name like header__form--search, that is BEM in action. Yes, classes can be named very long, but they are all readable and understandable.
-        </p>
-        <img src="https://cdn-images-1.medium.com/max/1600/1*6FW1FEVh_jR-uGHindm46A.png" alt="bem in practice">
-        <p>
-            Note that the best practice is to use BEM only with classes, and not IDs because classes allow you to repeat names if necessary and create more consistent coding structure. Also, if you want to break your website into organized modules, it should consist of the same structure: block, element, and modifier. Where each block can have multiple elements, and both block and elements can have multiple modifiers.
+            this в javascript не привязывается к объекту, а зависит от контекста вызова.
+            На практике же часто возникает необходимость в том, чтобы this внутри
+            функции всегда ссылался на конкретный объект.
+            Например, как в случае с setTimeout:
         </p>
 
+        <pre class="prettyprint">
+            var user = {
+                a: 1,
+                show: function() {
+                    alert( this.a );
+                }
+            };
+
+            setTimeout(user.show(), 1000);
+        </pre>
+        <p>
+            Через одну секунду мы увидим <ins>undefined</ins>, так как, по умолчанию, внутри window.setTimeout() контекст this устанавливается в объект window
+        </p>
+        <p>
+            Чтобы решить эту проблему, мы можем воспользоваться обёрткой и получить контекст через замыкание.
+        </p>
+        <pre class="prettyprint">
+            var user = {
+                a: 1,
+                show: function() {
+                    alert( this.a );
+                }
+            };
+
+            setTimeout(function () { user.show() }, 1000);
+        </pre>
+
+        <p>
+            Однако, можно воспользоваться функцией bind. В современных браузерах он используется как встроенный метод.
+        </p>
+
+        <p>Синтаксис: <pre> fun.bind(thisArg[, arg1[, arg2[, ...]]]) </pre> </p>
+
+        <ul>
+            <li>thisArg - контекст, который привязывается к fun.</li>
+            <li>arg1, arg2 будут прибавлены к каждому вызову новой функции, причем встанут перед теми, что указаны при вызове.</li>
+        </ul>
+
+        <pre class="prettyprint">
+    var user = {
+         a: 1,
+         show: function() {
+             alert( this.a );
+         }
+    };
+    setTimeout(user.show.bind(user), 1000); &sol;&sol;1
+        </pre>
+
+        <p>Стоит заметить, что: </p>
+
+        <ul>
+            <li>call/apply вызывает функцию, с заданными аргументами, в отличие от bind.</li>
+            <li>bind передаёт вызов в исходную функцию с заданной обёрткой.</li>
+        </ul>
+        <p>BTW: вызов bind также позволяет фиксировать первые аргументы функции («каррировать» её), и таким образом из общей функции получить её «частные» варианты – чтобы использовать их многократно без повтора одних и тех же аргументов каждый раз.</p>
         <time datetime="2017-12-12">2017-11-13</time>
 
     </section>
@@ -110,21 +164,46 @@
     </section>
     <section class="hidden">
         <h3>
-            What is a closure?
+           &lt;nav&gt;
         </h3>
 
-        <h5>Closures’ Rules and Side Effects</h5>
+        <h5>Реализовываем логику переключения табов.
+        </h5>
 
-        <p>
-            One of the most important and ticklish features with closures is that the inner function still has access to the outer function’s variables even after the outer function has returned. Yep, you read that correctly. When functions in JavaScript execute, they use the same scope chain that was in effect when they were created. This means that even after the outer function has returned, the inner function still has access to the outer function’s variables. Therefore, you can call the inner function later in your program.
+        <p>В Bootstrap есть компонент nav. Один из вариантов этого компонента, это табы,
+            которые переключаются по нажатию, без перезагрузки страницы.
         </p>
-
-        <p>Closures store references to the outer function’s variables; they do not store the actual value.  Closures get more interesting when the value of the outer function’s variable changes before the closure is called. </p>
-
-        <p>
-             Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop.
+        <p>Общий принцип работы в том, что каждый таб представлен ссылкой с href
+            в виде хеша #profile, а ниже определен div с id равным profile.
         </p>
-        <time datetime="2017-12-12">2017-12-12</time>
+        <p>По клику на таб происходит следующее:</p>
+        <ul>
+            <li>Класс active снимается с текущего элемента меню</li>
+            <li>У ссылки и дива с данными добавляется класс active</li>
+        </ul>
+
+        <pre class="prettyprint">
+  const links = document.querySelectorAll('a[data-toggle]');
+  const handler = (siblings, { target }) => {
+    siblings.forEach(element => element.classList.remove('active'));
+    target.classList.add('active');
+
+    const id = target.hash.slice(1);
+    const tabContent = document.getElementById(id);
+    const tabContentElements = tabContent.parentElement.children;
+    [...tabContentElements].forEach(element => element.classList.remove('active'));
+    tabContent.classList.add('active');
+  };
+
+  links.forEach((element) => {
+    const navRoot = element.closest('.nav');
+    const linksPerNav = navRoot.querySelectorAll('a[data-toggle]');
+    element.addEventListener('click', handler.bind(null, linksPerNav));
+  });
+        </pre>
+
+
+        <time datetime="2017-17-11">2017-17-11</time>
     </section>
 
 
