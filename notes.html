@@ -8,13 +8,14 @@
     <meta name="HandheldFriendly" content="true">
     <title>drobch | notes</title>
 
-<link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="css/star.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/squares.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
 
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 
 <body>
@@ -36,18 +37,34 @@
     <section class="visible">
 
         <h3>
-            What is BEM Methodology?
+            How to make carousel work
         </h3>
 
-        <h5>BEM Methodology will massively improve code maintainability and speed up the development process</h5>
-        <img class="first" src="http://media02.hongkiat.com/css-writing-methodologies/bem.jpg" alt="bem = block + element + modifier">
-        <p>
-            Today, there are plenty of methodologies with the aim of reducing CSS code and making your CSS code more maintainable. In this section, I am going to explain and provide a few examples of one of them: BEM. BEM stands for Block Element Modifier. The main idea behind it is to speed up the development process, and ease the teamwork of developers by arranging CSS classes into independent modules. If you ever saw a class name like header__form--search, that is BEM in action. Yes, classes can be named very long, but they are all readable and understandable.
-        </p>
-        <img src="https://cdn-images-1.medium.com/max/1600/1*6FW1FEVh_jR-uGHindm46A.png" alt="bem in practice">
-        <p>
-            Note that the best practice is to use BEM only with classes, and not IDs because classes allow you to repeat names if necessary and create more consistent coding structure. Also, if you want to break your website into organized modules, it should consist of the same structure: block, element, and modifier. Where each block can have multiple elements, and both block and elements can have multiple modifiers.
-        </p>
+        <h5>This is one of possible variants how to make js part of the carousel like in Bootstrap with jquery and lodash. The code will work for all carousels you have on a page.</h5>
+        <pre class="prettyprint">
+
+  const carousel = $('[data-ride="carousel"]');
+  const slides = carousel.find('.carousel-item');
+  const maxIndex = slides.length - 1;
+  let currentIndex = _.findIndex(slides, slide => $(slide).hasClass('active'));
+  const handlerGenerator = next => () => {
+    const newCurrentIndex = next(currentIndex);
+    slides.removeClass('active');
+    slides.each((i, element) => {
+      const current = $(element);
+      if (i === newCurrentIndex) {
+        current.addClass('active');
+      }
+    });
+    currentIndex = newCurrentIndex;
+  };
+  const prev = carousel.find('[data-slide="prev"]');
+  prev.click(handlerGenerator(i => (i === 0 ? maxIndex : i - 1)));
+  const next = carousel.find('[data-slide="next"]');
+  next.click(handlerGenerator(i => (maxIndex === i ? 0 : i + 1)));
+
+
+        </pre>
 
         <time datetime="2017-12-12">2017-11-13</time>
 
