@@ -1,3 +1,3 @@
-# Star field blog 
-https://drobch.github.io/star-field/
-#
+# Star field blog
+![screenshot](screenshot.png)
+![screenshot2](screenshot2.png)
